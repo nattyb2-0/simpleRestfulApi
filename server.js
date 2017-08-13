@@ -43,5 +43,14 @@ app.use((err, req, res, next)=> {
   res.status(500).send('Something broke!')
 })
 
+//// require our routes which will serve as our custom middleware to handle all request, response
+//methods
+const apiRouter = require('./routes/api');
+
+//use our routes for the application as middleware
+app.use('/api', apiRouter)
+
+
+
 //tell our app to listen and what port to listen on
 app.listen(PORT, () => console.log('server here! listening on', PORT));
