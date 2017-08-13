@@ -34,5 +34,14 @@ End the request-response cycle.
 Call the next middleware function in the stack.*/
 app.use(logger('dev'))
 
+//Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
+app.use(bodyParser.json())
+
+//allow app to use error middleware
+app.use((err, req, res, next)=> {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
+
 //tell our app to listen and what port to listen on
 app.listen(PORT, () => console.log('server here! listening on', PORT));
