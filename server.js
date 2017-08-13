@@ -13,12 +13,12 @@ const path = require('path');
 const app = express();
 
 //declare the port variable for development and for production
-const PORT = process.argv[2] || process.env.port || 5000;
+const PORT = process.argv[2] || process.env.port || 3000;
 
 //set our initial request and response method
-app.get('/', (req,res)=>{
-  res.send('this is now an application tht is working!!!')
-})
+// app.get('/', (req,res)=>{
+//   res.send('this is now an application tht is working!!!')
+// })
 
 //allow our app to use the dependencies as middlewares
 /*Express is a routing and middleware web framework that has minimal functionality of its own:
@@ -49,6 +49,14 @@ const apiRouter = require('./routes/api');
 
 //use our routes for the application as middleware
 app.use('/api', apiRouter)
+
+
+
+
+
+ app.get('/', (req,res,next)=>{
+  res.send('this will end up being the home page')
+ })
 
 
 
