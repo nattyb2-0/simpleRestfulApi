@@ -1,0 +1,32 @@
+{
+  "name": "simple_restful_api",
+  "version": "1.0.0",
+  "description": "a simple restfusful api application with psql database to serve information to others",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nattyb2-0/simpleRestfulApi.git"
+  },
+  "keywords": [
+    "restful",
+    "api",
+    "api",
+    "express",
+    "node"
+  ],
+  "author": "natty b. davis III",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nattyb2-0/simpleRestfulApi/issues"
+  },
+  "homepage": "https://github.com/nattyb2-0/simpleRestfulApi#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7"
+  }
+}
