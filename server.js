@@ -49,7 +49,7 @@ const apiRouter = require('./routes/api');
 
 //use our routes for the application as middleware
 app.use('/api', apiRouter)
-
+app.use('/users', (req,res)=> res.send('this will be user route'))
 
 
 
